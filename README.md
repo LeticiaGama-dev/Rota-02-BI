@@ -70,8 +70,8 @@ O projeto foca em:
 
 - Insights obtidos através de **Data Storytelling**, apoiando decisões baseadas em dados
 
-![Dashboard Página 1] (dash1 rota 02 - Leticia Gama.jpg)  
-![Dashboard Página 2] (dash2 rota 02 - Leticia Gama.jpg)
+![Dashboard Página 1] (rota02_dashboard_page1.jpeg)  
+![Dashboard Página 2] (rota02_dashboard_page2.jpeg)
 
 
 ---
