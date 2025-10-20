@@ -1,5 +1,5 @@
 # Rota-02-BI
-Projeto de Business Intelligence da Laboratória - análise e dashboard Airbnb
+Projeto de Business Intelligence da Laboratória - análise, storytelling e dashboard Airbnb
 ---
 ## Descrição do Projeto
 O projeto **Rota 02 – BI** teve como objetivo aplicar conceitos de **Business Intelligence (Inteligência de Negócios)** para transformar dados em **insights estratégicos** e visuais interativos.  
@@ -33,7 +33,7 @@ O projeto foca em:
 
 ### Badges
 ![Power BI](https://img.shields.io/badge/PowerBI-Data%20Visualization-blue)  
-![BigQuery](https://img.shields.io/badge/BigQuery-Data%20Warehouse-blueviolet)  
+![BigQuery](https://img.shields.io/badge/BigQuery-Data%20Warehouse-blueviolet)
 
 ---
 
@@ -92,5 +92,5 @@ O projeto foca em:
 
 ## Autor
 **Leticia Gama de Souza**  
-[LinkedIn](link_linkedin_aqui) | [GitHub](link_github_aqui)
+[LinkedIn](www.linkedin.com/in/leticia-gama-code) | [GitHub](https://github.com/LeticiaGama-dev)
 
