@@ -156,7 +156,6 @@ Faixa de Disponibilidade = SWITCH(TRUE(),
 )
 ```
 
-
 ---
 
 ## Como Rodar o Projeto
@@ -167,9 +166,8 @@ Faixa de Disponibilidade = SWITCH(TRUE(),
 4. Aplicar fórmulas DAX conforme definido no projeto
 5. Construir visualizações e dashboards interativos
 6. Explorar insights utilizando Data Storytelling
-###  Observações
+###  Observação
 - Dados utilizados são fictícios e foram criados para fins de demonstração
-- Arquivo .pbix contém todas as fórmulas DAX e dashboards interativos
 
 
 ---
