@@ -94,17 +94,10 @@ O projeto foca em:
   - Disponibilidade média anual por bairro
   - Distribuição geográfica das acomodações
 
-Perfeito, Leticia! 😄
-Vou te dar **uma versão pronta do Markdown das DAX**, já formatada certinho para o GitHub:
-
-* **Texto explicativo fora dos blocos de código**
-* **Cada fórmula DAX em seu próprio bloco `DAX`**
-* Pronto para copiar e colar diretamente no README
 
 ---
 
-````markdown
-### 🧠 Medidas DAX Utilizadas
+###  Medidas DAX Utilizadas
 
 #### 1. Potencial Anual de Hóspedes por Bairro
 - **O que faz:** calcula o número total de hóspedes por ano em cada bairro.
