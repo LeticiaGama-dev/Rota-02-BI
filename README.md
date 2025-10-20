@@ -81,12 +81,16 @@ O projeto foca em:
 
 ## Como Rodar o Projeto
 
-1. Abrir o Power BI Desktop
+1. Abrir o Power BI Desktop versão 2.148.878.0 (64-bit, outubro de 2025)
 2. Conectar às bases de dados do Airbnb (BigQuery ou CSVs)
 3. Criar relações entre tabelas
 4. Aplicar fórmulas DAX conforme definido no projeto
 5. Construir visualizações e dashboards interativos
 6. Explorar insights utilizando Data Storytelling
+###  Observações
+- Dados utilizados são fictícios e foram criados para fins de demonstração
+- Arquivo .pbix contém todas as fórmulas DAX e dashboards interativos
+
 
 ---
 
