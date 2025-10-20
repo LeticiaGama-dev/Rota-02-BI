@@ -70,8 +70,11 @@ O projeto foca em:
 
 - Insights obtidos através de **Data Storytelling**, apoiando decisões baseadas em dados
 
-![Dashboard Página 1] (rota02_dashboard_page1.jpeg)  
-![Dashboard Página 2] (rota02_dashboard_page2.jpeg)
+### Página 1
+![Dashboard Rota 02 - Página 1](https://github.com/LeticiaGama-dev/Rota-02-BI/blob/main/rota02_dashboard_page1.jpeg)
+
+### Página 2
+![Dashboard Rota 02 - Página 2](https://github.com/LeticiaGama-dev/Rota-02-BI/blob/main/rota02_dashboard_page2.jpeg)
 
 
 ---
