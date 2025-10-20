@@ -94,6 +94,74 @@ O projeto foca em:
   - Disponibilidade média anual por bairro
   - Distribuição geográfica das acomodações
 
+Perfeito, Leticia! 😄
+Vou te dar **uma versão pronta do Markdown das DAX**, já formatada certinho para o GitHub:
+
+* **Texto explicativo fora dos blocos de código**
+* **Cada fórmula DAX em seu próprio bloco `DAX`**
+* Pronto para copiar e colar diretamente no README
+
+---
+
+````markdown
+### 🧠 Medidas DAX Utilizadas
+
+#### 1. Potencial Anual de Hóspedes por Bairro
+- **O que faz:** calcula o número total de hóspedes por ano em cada bairro.
+
+```DAX
+Potencial Anual de Hóspedes = SUM(Tabela[Hóspedes])
+````
+
+#### 2. Distribuição de Acomodações por Bairro
+
+* **O que faz:** conta o número total de acomodações disponíveis em cada bairro.
+
+```DAX
+Acomodações por Bairro = COUNTROWS(Tabela)
+```
+
+#### 3. Tipos de Acomodações Disponíveis
+
+* **O que faz:** calcula a proporção percentual de cada tipo de acomodação (Casa Completa, Quarto Privativo, Quarto Compartilhado).
+
+```DAX
+% Casa Completa = DIVIDE(COUNTROWS(FILTER(Tabela, Tabela[Tipo] = "Casa Completa")), COUNTROWS(Tabela))
+```
+
+#### 4. Distribuição dos Preços das Acomodações
+
+* **O que faz:** organiza as acomodações em faixas de preço, mostrando quantas se enquadram em cada faixa.
+
+```DAX
+Faixa de Preço = SWITCH(TRUE(),
+    Tabela[Preço] <= 50, "Até 50",
+    Tabela[Preço] <= 100, "51 a 100",
+    Tabela[Preço] <= 150, "101 a 150",
+    "Acima de 150"
+)
+```
+
+#### 5. Distribuição de Avaliações por Acomodações
+
+* **O que faz:** conta a quantidade de acomodações com base no número de avaliações.
+
+```DAX
+Avaliações por Acomodações = COUNTROWS(FILTER(Tabela, Tabela[Avaliações] > 0))
+```
+
+#### 6. Disponibilidade Anual das Acomodações
+
+* **O que faz:** classifica as acomodações de acordo com sua disponibilidade anual em dias.
+
+```DAX
+Faixa de Disponibilidade = SWITCH(TRUE(),
+    Tabela[Disponibilidade] <= 30, "Até 30 dias",
+    Tabela[Disponibilidade] <= 60, "31 a 60 dias",
+    Tabela[Disponibilidade] <= 90, "61 a 90 dias",
+    "Acima de 90 dias"
+)
+```
 
 
 ---
