@@ -72,9 +72,28 @@ O projeto foca em:
 ## Resultados
 
 
-### Página 1
-![Dashboard 1](dashboards_screenshots/dashboard_page1n.jpeg.jpg)
-![Dashboard 2](dashboards_screenshots/dashboard_page2n.jpeg.jpg)
+![Dashboard Página 1](dashboards_screenshots/dashboard_page1n.jpeg.jpg)
+
+### 📈 Dashboards Criados
+
+#### Página 1
+- Gráficos incluídos:
+  - Potencial anual de hóspedes por bairro
+  - Distribuição de acomodações por bairro
+  - Tipos de acomodações disponíveis
+  - Distribuição dos preços das acomodações
+  - Distribuição de avaliações por acomodações
+  - Disponibilidade anual das acomodações
+
+![Dashboard Página 2](dashboards_screenshots/dashboard_page2n.jpeg.jpg)
+
+#### Página 2
+- Gráficos incluídos:
+  - Total de avaliações por ano
+  - Preço médio por ano por bairro
+  - Disponibilidade média anual por bairro
+  - Distribuição geográfica das acomodações
+
 
 
 ---
