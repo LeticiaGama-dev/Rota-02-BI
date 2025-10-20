@@ -92,5 +92,5 @@ O projeto foca em:
 
 ## Autor
 **Leticia Gama de Souza**  
-[LinkedIn](www.linkedin.com/in/leticia-gama-code) | [GitHub](https://github.com/LeticiaGama-dev)
+[LinkedIn](https://www.linkedin.com/in/leticia-gama-code) | [GitHub](https://github.com/LeticiaGama-dev)
 
