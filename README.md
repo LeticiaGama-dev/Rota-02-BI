@@ -73,10 +73,9 @@ O projeto foca em:
 
 
 ### Página 1
-![Dashboard Rota 02 - Página 1](https://github.com/LeticiaGama-dev/Rota-02-BI/blob/main/rota02_dashboard_page1n.jpeg)
+![Dashboard Page 1](https://raw.githubusercontent.com/LeticiaGama-dev/Rota-02-BI/main/dashboard_page1n.jpeg.jpg)
+![Dashboard Page 2](https://raw.githubusercontent.com/LeticiaGama-dev/Rota-02-BI/main/dashboard_page2n.jpeg.jpg)
 
-### Página 2
-![Dashboard Rota 02 - Página 2](https://github.com/LeticiaGama-dev/Rota-02-BI/blob/main/rota02_dashboard_page2n.jpeg)
 
 ---
 
