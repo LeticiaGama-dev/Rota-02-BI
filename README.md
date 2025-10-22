@@ -86,9 +86,9 @@ O objetivo de negócio é responder às seguintes perguntas:
 ## Resultados
 
 
-![Dashboard Página 1](dashboards_screenshots/dashboard_page1n.jpeg.jpg)
-
 ### 📈 Dashboards Criados
+
+![Dashboard Página 1](dashboards_screenshots/dashboard_page1n.jpeg.jpg)
 
 #### Página 1
 - Gráficos incluídos:
@@ -108,7 +108,25 @@ O objetivo de negócio é responder às seguintes perguntas:
   - Disponibilidade média anual por bairro
   - Distribuição geográfica das acomodações
 
+##  Principais Insights e Conclusões
 
+![dashboard_page3 jpeg](https://github.com/user-attachments/assets/11ca8a5b-8960-45dd-8d9a-7d1becfa6222)
+
+#### Resultados Principais
+* **Tipo de Quarto:** A "Casa Completa" é o tipo de acomodação mais popular...
+* **Preço e Disponibilidade:** A mediana de preço por acomodação é de $152.714...
+* ... (o resto do texto que eu te passei)
+
+
+![dashboard_page4](https://github.com/user-attachments/assets/8056ef74-30d2-409b-af14-c2808b5d4314)
+
+#### Recomendações Estratégicas
+1.  **Foco nos Mercados Principais:** Anfitriões devem concentrar esforços...
+2.  **Exploração de Oportunidades:** Bairros como **Queens e Staten Island**...
+3.  ... (o resto do texto)
+
+## 🧮 Medidas DAX Utilizadas
+...
 ---
 
 ###  Medidas DAX Utilizadas
