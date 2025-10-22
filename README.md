@@ -119,6 +119,7 @@ A análise da base de dados permitiu extrair os seguintes resultados e recomenda
 
 ###  Medidas DAX Utilizadas
 
+
 #### 1. Potencial Anual de Hóspedes por Bairro
 - **O que faz:** calcula o número total de hóspedes por ano em cada bairro.
 ```DAX
