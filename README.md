@@ -45,10 +45,6 @@ O objetivo de negócio é responder às seguintes perguntas:
 - **Linguagens:** DAX, SQL (BigQuery) 
 - **Insumos:** Bases de dados do Airbnb  
 
-### Badges
-![Power BI](https://img.shields.io/badge/PowerBI-Data%20Visualization-blue)  
-![BigQuery](https://img.shields.io/badge/BigQuery-Data%20Warehouse-blueviolet)
-
 ## Passos do Projeto
 
 ### 1️⃣ Processar e Preparar a Base de Dados
@@ -117,77 +113,54 @@ A análise da base de dados permitiu extrair os seguintes resultados e recomenda
 4.  **Melhoria na Coleta de Dados:** Foi observada inconsistência nos dados (erros de preenchimento). Recomenda-se uma melhor padronização dos questionários para melhorar a qualidade da base de dados.
 5.  **Gestão de Anúncios:** Anúncios indisponíveis devem ser verificados, pois podem indicar anfitriões desengajados ou iniciantes que necessitam de treinamento.
 
-###  Medidas DAX Utilizadas
 
-#### 1\. Potencial Anual de Hóspedes por Bairro
+### Medidas DAX Utilizadas
 
-  - **O que faz:** calcula o número total de hóspedes por ano em cada bairro.
+1.  **Potencial Anual de Hóspedes por Bairro**
+    * **O que faz:** Calcula o número total de hóspedes por ano em cada bairro.
+    ```dax
+    Potencial Anual de Hóspedes = SUM(Tabela[Hóspedes])
+    ```
 
-<!-- end list -->
+2.  **Distribuição de Acomodações por Bairro**
+    * **O que faz:** Conta o número total de acomodações disponíveis em cada bairro.
+    ```dax
+    Acomodações por Bairro = COUNTROWS(Tabela)
+    ```
 
-```dax
-Potencial Anual de Hóspedes = SUM(Tabela[Hóspedes])
-```
+3.  **Tipos de Acomodações Disponíveis**
+    * **O que faz:** Calcula a proporção percentual de cada tipo de acomodação (Casa Completa, Quarto Privativo, Quarto Compartilhado).
+    ```dax
+    % Casa Completa = DIVIDE(COUNTROWS(FILTER(Tabela, Tabela[Tipo] = "Casa Completa")), COUNTROWS(Tabela))
+    ```
 
-#### 2\. Distribuição de Acomodações por Bairro
+4.  **Distribuição dos Preços das Acomodações**
+    * **O que faz:** Organiza as acomodações em faixas de preço, mostrando quantas se enquadram em cada faixa.
+    ```dax
+    Faixa de Preço = SWITCH(TRUE(),
+        Tabela[Preço] <= 50, "Até 50",
+        Tabela[Preço] <= 100, "51 a 100",
+        Tabela[Preço] <= 150, "101 a 150",
+        "Acima de 150"
+    )
+    ```
 
-  - **O que faz:** conta o número total de acomodações disponíveis em cada bairro.
+5.  **Distribuição de Avaliações por Acomodações**
+    * **O que faz:** Conta a quantidade de acomodações com base no número de avaliações.
+    ```dax
+    Avaliações por Acomodações = COUNTROWS(FILTER(Tabela, Tabela[Avaliações] > 0))
+    ```
 
-<!-- end list -->
-
-```dax
-Acomodações por Bairro = COUNTROWS(Tabela)
-```
-
-#### 3\. Tipos de Acomodações Disponíveis
-
-  - **O que faz:** calcula a proporção percentual de cada tipo de acomodação (Casa Completa, Quarto Privativo, Quarto Compartilhado).
-
-<!-- end list -->
-
-```dax
-% Casa Completa = DIVIDE(COUNTROWS(FILTER(Tabela, Tabela[Tipo] = "Casa Completa")), COUNTROWS(Tabela))
-```
-
-#### 4\. Distribuição dos Preços das Acomodações
-
-  - **O que faz:** organiza as acomodações em faixas de preço, mostrando quantas se enquadram em cada faixa.
-
-<!-- end list -->
-
-```dax
-Faixa de Preço = SWITCH(TRUE(),
-    Tabela[Preço] <= 50, "Até 50",
-    Tabela[Preço] <= 100, "51 a 100",
-    Tabela[Preço] <= 150, "101 a 150",
-    "Acima de 150"
-)
-```
-
-#### 5\. Distribuição de Avaliações por Acomodações
-
-  - **O que faz:** conta a quantidade de acomodações com base no número de avaliações.
-
-<!-- end list -->
-
-```dax
-Avaliações por Acomodações = COUNTROWS(FILTER(Tabela, Tabela[Avaliações] > 0))
-```
-
-#### 6\. Disponibilidade Anual das Acomodações
-
-  - **O que faz:** classifica as acomodações de acordo com sua disponibilidade anual em dias.
-
-<!-- end list -->
-
-```dax
-Faixa de Disponibilidade = SWITCH(TRUE(),
-    Tabela[Disponibilidade] <= 30, "Até 30 dias",
-    Tabela[Disponibilidade] <= 60, "31 a 60 dias",
-    Tabela[Disponibilidade] <= 90, "61 a 90 dias",
-    "Acima de 90 dias"
-)
-```
+6.  **Disponibilidade Anual das Acomodações**
+    * **O que faz:** Classifica as acomodações de acordo com sua disponibilidade anual em dias.
+    ```dax
+    Faixa de Disponibilidade = SWITCH(TRUE(),
+        Tabela[Disponibilidade] <= 30, "Até 30 dias",
+        Tabela[Disponibilidade] <= 60, "31 a 60 dias",
+        Tabela[Disponibilidade] <= 90, "61 a 90 dias",
+        "Acima de 90 dias"
+    )
+    ```
 
 ## Como Rodar o Projeto
 
