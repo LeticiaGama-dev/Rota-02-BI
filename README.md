@@ -13,6 +13,20 @@ O projeto foca em:
 - Construção de dashboards interativos com narrativa de dados
 
 ---
+Contexto e Problema de Negócio
+
+Com a ascensão de plataformas como o Airbnb, maximizar a eficiência e a rentabilidade tornou-se crucial para anfitriões e para a própria plataforma. A enorme quantidade de dados gerados (imóveis, preços, localizações, feedback) oferece uma oportunidade única para a aplicação de Business Intelligence (BI).
+
+Este projeto atua sobre esse desafio, usando o BI para transformar dados brutos em decisões estratégicas.
+
+O objetivo de negócio é responder às seguintes perguntas:
+
+    Quais padrões de disponibilidade, preço e avaliação podem ser identificados?
+
+    Existem tendências ou fatores (como localização e tipo de imóvel) que influenciam diretamente a ocupação e a receita?
+
+    Como podemos usar esses insights para otimizar a receita e melhorar a eficiência operacional dos anfitriões?
+---
 
 ## Objetivos
 
