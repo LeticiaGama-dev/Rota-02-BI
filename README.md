@@ -21,13 +21,11 @@ Este projeto atua sobre esse desafio, usando o BI para transformar dados brutos 
 
 O objetivo de negócio é responder às seguintes perguntas:
 
-   O objetivo de negócio é responder às seguintes perguntas:
    - Quais padrões de disponibilidade, preço e avaliação podem ser identificados?
    - Existem tendências ou fatores (como localizaçãoe tipo do imóvel) que influenciam diretamente a ocupação e a receita?
    - Como podemos usar estes insights para otimizar a receita e melhorar a eficiência operacional dos anfitriões?
 
-     O objetivo de negócio é responder às seguintes perguntas:
-
+  
   ---
 
 ## Objetivos
