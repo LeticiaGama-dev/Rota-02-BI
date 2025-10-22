@@ -49,8 +49,6 @@ O objetivo de negócio é responder às seguintes perguntas:
 ![Power BI](https://img.shields.io/badge/PowerBI-Data%20Visualization-blue)  
 ![BigQuery](https://img.shields.io/badge/BigQuery-Data%20Warehouse-blueviolet)
 
----
-
 ## Passos do Projeto
 
 ### 1️⃣ Processar e Preparar a Base de Dados
@@ -73,20 +71,7 @@ O objetivo de negócio é responder às seguintes perguntas:
 - Aplicar narrativa de dados para insights claros
 - Apresentar recomendações estratégicas
 
----
-
-## Resultados
-
-- Dashboard completo mostrando:  
-  - Distribuição de quartos por bairro  
-  - Ocupação e disponibilidade ao longo do ano  
-  - Métricas estratégicas calculadas com DAX
-
-- Insights obtidos através de **Data Storytelling**, apoiando decisões baseadas em dados
-## Resultados
-
-
-### 📈 Dashboards Criados
+### Dashboards Criados
 
 ![Dashboard Página 1](dashboards_screenshots/dashboard_page1n.jpeg.jpg)
 
@@ -112,83 +97,96 @@ O objetivo de negócio é responder às seguintes perguntas:
 
 ![dashboard_page3 jpeg](https://github.com/user-attachments/assets/11ca8a5b-8960-45dd-8d9a-7d1becfa6222)
 
-#### Resultados Principais
-* **Tipo de Quarto:** A "Casa Completa" é o tipo de acomodação mais popular...
-* **Preço e Disponibilidade:** A mediana de preço por acomodação é de $152.714...
-* ... (o resto do texto que eu te passei)
-
-
 ![dashboard_page4](https://github.com/user-attachments/assets/8056ef74-30d2-409b-af14-c2808b5d4314)
 
-#### Recomendações Estratégicas
-1.  **Foco nos Mercados Principais:** Anfitriões devem concentrar esforços...
-2.  **Exploração de Oportunidades:** Bairros como **Queens e Staten Island**...
-3.  ... (o resto do texto)
 
-## 🧮 Medidas DAX Utilizadas
-...
----
+A análise da base de dados permitiu extrair os seguintes resultados e recomendações estratégicas:
+
+#### Resultados Principais
+
+* **Tipo de Quarto:** A "Casa Completa" é o tipo de acomodação mais popular, representando mais de 52% da oferta, seguida por "Quarto Privativo".
+* **Preço e Disponibilidade:** A mediana de preço por acomodação é de $152.714, com a maior parte dos anúncios abaixo de $250. A disponibilidade anual apresentou tendência de aumento entre 2018 e 2019.
+* **Distribuição:** A maior concentração de aluguéis está em **Manhattan e Brooklyn**, que funcionam como os principais centros de atividade do Airbnb em NY.
+* **Crescimento:** O número de avaliações e a disponibilidade cresceram significativamente de 2017 a 2019, indicando que a plataforma está em plena expansão.
+
+#### Recomendações Estratégicas
+
+1.  **Foco nos Mercados Principais:** Anfitriões devem concentrar esforços de marketing e gestão em **Brooklyn e Manhattan**, pois são as áreas com maior demanda e oferta, visando maximizar os lucros.
+2.  **Exploração de Oportunidades:** Bairros como **Queens e Staten Island** são mercados menos explorados, com menor competição e potencial de crescimento.
+3.  **Diferenciação Competitiva:** Para justificar preços mais elevados, anfitriões devem se diferenciar através de serviços adicionais, comodidades, experiências personalizadas e avaliações de alta qualidade.
+4.  **Melhoria na Coleta de Dados:** Foi observada inconsistência nos dados (erros de preenchimento). Recomenda-se uma melhor padronização dos questionários para melhorar a qualidade da base de dados.
+5.  **Gestão de Anúncios:** Anúncios indisponíveis devem ser verificados, pois podem indicar anfitriões desengajados ou iniciantes que necessitam de treinamento.
 
 ###  Medidas DAX Utilizadas
 
 #### 1. Potencial Anual de Hóspedes por Bairro
 - **O que faz:** calcula o número total de hóspedes por ano em cada bairro.
-
 ```DAX
 Potencial Anual de Hóspedes = SUM(Tabela[Hóspedes])
 ````
 
-#### 2. Distribuição de Acomodações por Bairro
+#### 2\. Distribuição de Acomodações por Bairro
 
-* **O que faz:** conta o número total de acomodações disponíveis em cada bairro.
+  * **O que faz:** conta o número total de acomodações disponíveis em cada bairro.
 
-```DAX
+<!-- end list -->
+
+```dax
 Acomodações por Bairro = COUNTROWS(Tabela)
 ```
 
-#### 3. Tipos de Acomodações Disponíveis
+#### 3\. Tipos de Acomodações Disponíveis
 
-* **O que faz:** calcula a proporção percentual de cada tipo de acomodação (Casa Completa, Quarto Privativo, Quarto Compartilhado).
+  * **O que faz:** calcula a proporção percentual de cada tipo de acomodação (Casa Completa, Quarto Privativo, Quarto Compartilhado).
 
-```DAX
+<!-- end list -->
+
+```dax
 % Casa Completa = DIVIDE(COUNTROWS(FILTER(Tabela, Tabela[Tipo] = "Casa Completa")), COUNTROWS(Tabela))
 ```
 
-#### 4. Distribuição dos Preços das Acomodações
+#### 4\. Distribuição dos Preços das Acomodações
 
-* **O que faz:** organiza as acomodações em faixas de preço, mostrando quantas se enquadram em cada faixa.
+  * **O que faz:** organiza as acomodações em faixas de preço, mostrando quantas se enquadram em cada faixa.
 
-```DAX
+<!-- end list -->
+
+```dax
 Faixa de Preço = SWITCH(TRUE(),
-    Tabela[Preço] <= 50, "Até 50",
-    Tabela[Preço] <= 100, "51 a 100",
-    Tabela[Preço] <= 150, "101 a 150",
-    "Acima de 150"
+    Tabela[Preço] <= 50, "Até 50",
+    Tabela[Preço] <= 100, "51 a 100",
+    Tabela[Preço] <= 150, "101 a 150",
+    "Acima de 150"
 )
 ```
 
-#### 5. Distribuição de Avaliações por Acomodações
+#### 5\. Distribuição de Avaliações por Acomodações
 
-* **O que faz:** conta a quantidade de acomodações com base no número de avaliações.
+  * **O que faz:** conta a quantidade de acomodações com base no número de avaliações.
 
-```DAX
+<!-- end list -->
+
+```dax
 Avaliações por Acomodações = COUNTROWS(FILTER(Tabela, Tabela[Avaliações] > 0))
 ```
 
-#### 6. Disponibilidade Anual das Acomodações
+#### 6\. Disponibilidade Anual das Acomodações
 
-* **O que faz:** classifica as acomodações de acordo com sua disponibilidade anual em dias.
+  * **O que faz:** classifica as acomodações de acordo com sua disponibilidade anual em dias.
 
-```DAX
+<!-- end list -->
+
+```dax
 Faixa de Disponibilidade = SWITCH(TRUE(),
-    Tabela[Disponibilidade] <= 30, "Até 30 dias",
-    Tabela[Disponibilidade] <= 60, "31 a 60 dias",
-    Tabela[Disponibilidade] <= 90, "61 a 90 dias",
-    "Acima de 90 dias"
+    Tabela[Disponibilidade] <= 30, "Até 30 dias",
+    Tabela[Disponibilidade] <= 60, "31 a 60 dias",
+    Tabela[Disponibilidade] <= 90, "61 a 90 dias",
+    "Acima de 90 dias"
 )
 ```
 
----
+```
+```
 
 ## Como Rodar o Projeto
 
@@ -201,8 +199,6 @@ Faixa de Disponibilidade = SWITCH(TRUE(),
 ###  Observação
 - Dados utilizados são fictícios e foram criados para fins de demonstração
 
-
----
 
 ## Autor
 **Leticia Gama de Souza**  
